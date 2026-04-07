@@ -1,0 +1,229 @@
+body.exp-page {
+  overflow-y: auto;
+  background-color: #6ab8d8;
+  cursor: none;
+}
+
+/* Full-page overlay on top of canvas */
+.exp-overlay {
+  position: relative;
+  z-index: 1;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: row;
+  color: #ffffff;
+}
+
+/* Right column */
+.exp-right {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.exp-main {
+  padding: 3rem 2.4rem 6rem;
+}
+
+.kern-xp {
+  margin-right: 0.12em;
+}
+
+.exp-heading {
+  font-family: "Frisbee", system-ui, sans-serif;
+  font-weight: normal;
+  font-size: clamp(2rem, 6vw, 5rem);
+  letter-spacing: 0.04em;
+  margin: 0 0 3rem;
+  color: #ffffff;
+}
+
+/* Experience list — 2-column card grid */
+.exp-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 2.5rem;
+}
+
+/* Card */
+.exp-item {
+  display: flex;
+  flex-direction: column;
+  border-radius: 6px;
+  overflow: hidden;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.25);
+}
+
+/* Cover video/image at top of card */
+.exp-cover {
+  width: 100%;
+  height: 220px;
+  overflow: hidden;
+  background: rgba(0, 0, 0, 0.15);
+  flex-shrink: 0;
+}
+
+.exp-cover video,
+.exp-cover img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+/* Body below cover — black fill */
+.exp-body {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  background: rgba(0, 0, 0, 0.82);
+  padding: 0.9rem 1rem 1rem;
+}
+
+/* Role + tag on same row */
+.exp-title-row {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 1rem;
+  margin-bottom: 0.5rem;
+}
+
+.exp-role {
+  margin: 0;
+  font-size: 1rem;
+  font-weight: 400;
+  letter-spacing: 0.02em;
+  color: #ffffff;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
+.exp-tag {
+  flex-shrink: 0;
+  border: 1px solid rgba(255, 255, 255, 0.45);
+  border-radius: 20px;
+  padding: 0.18em 0.85em;
+  font-size: 0.75rem;
+  font-weight: 300;
+  color: rgba(255, 255, 255, 0.8);
+  letter-spacing: 0.04em;
+}
+
+.exp-desc {
+  margin: 0;
+  font-size: 0.875rem;
+  font-weight: 300;
+  line-height: 1.7;
+  color: rgba(255, 255, 255, 0.7);
+}
+
+/* Gallery buttons */
+.exp-gallery-btns {
+  display: flex;
+  gap: 0.75rem;
+  margin-top: 1rem;
+}
+
+.exp-gallery-btn,
+a.exp-gallery-btn {
+  padding: 0.38em 1.15em;
+  border: 1px solid rgba(255, 255, 255, 0.55);
+  border-radius: 20px;
+  background: transparent;
+  color: #ffffff;
+  font-family: 'Outfit', system-ui, sans-serif;
+  font-size: 0.8rem;
+  font-weight: 300;
+  letter-spacing: 0.04em;
+  cursor: none;
+  transition: background 0.2s;
+}
+
+.exp-gallery-btn:hover,
+a.exp-gallery-btn:hover {
+  background: rgba(255, 255, 255, 0.15);
+}
+
+a.exp-gallery-btn {
+  text-decoration: none;
+  display: inline-block;
+}
+
+/* ── Gallery lightbox overlay ── */
+.gallery-overlay {
+  display: none;
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.72);
+  z-index: 999;
+  align-items: center;
+  justify-content: center;
+}
+
+.gallery-overlay--open {
+  display: flex;
+}
+
+.gallery-modal {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  max-width: 80vw;
+}
+
+.gallery-media img,
+.gallery-media video {
+  max-width: 80vw;
+  max-height: 80vh;
+  object-fit: contain;
+  border-radius: 6px;
+  display: block;
+}
+
+.gallery-counter {
+  margin: 0.6rem 0 0;
+  font-family: 'Outfit', sans-serif;
+  font-size: 0.8rem;
+  font-weight: 300;
+  color: rgba(255, 255, 255, 0.55);
+  letter-spacing: 0.1em;
+}
+
+/* Arrow buttons — white circles with < > */
+.gallery-arrow {
+  position: fixed;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 2.8rem;
+  height: 2.8rem;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.2);
+  border: none;
+  color: #ffffff;
+  font-size: 1.1rem;
+  font-weight: 300;
+  font-family: 'Outfit', system-ui, sans-serif;
+  cursor: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+  transition: background 0.2s;
+  line-height: 1;
+}
+
+.gallery-arrow:hover {
+  background: rgba(255, 255, 255, 0.38);
+}
+
+.gallery-arrow--prev {
+  left: 1.5rem;
+}
+
+.gallery-arrow--next {
+  right: 1.5rem;
+}

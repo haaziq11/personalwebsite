@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Haaziq — Experiences</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Outfit:wght@200;300;400&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="experiences.css" />
+  </head>
+  <body class="exp-page">
+    <canvas id="c"></canvas>
+
+    <!-- Gallery Lightbox -->
+    <div class="gallery-overlay" id="gallery-overlay" aria-hidden="true">
+      <button class="gallery-arrow gallery-arrow--prev" id="gallery-prev">&lt;</button>
+      <div class="gallery-modal">
+        <div class="gallery-media" id="gallery-media"></div>
+        <p class="gallery-counter" id="gallery-counter"></p>
+      </div>
+      <button class="gallery-arrow gallery-arrow--next" id="gallery-next">&gt;</button>
+    </div>
+
+    <div class="exp-overlay">
+
+      <!-- Left sidebar -->
+      <aside class="sidebar">
+        <nav class="sidenav">
+          <a href="index.html" class="sidenav__tab">ME</a>
+          <a href="experiences.html" class="sidenav__tab sidenav__tab--active">EXPERIENCES</a>
+        </nav>
+      </aside>
+
+      <!-- Right column -->
+      <div class="exp-right">
+
+        <!-- Icons top-right -->
+        <div class="exp-icons">
+          <a href="https://github.com/haaziq11" class="topnav__icon" aria-label="GitHub" target="_blank">
+            <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0 0 24 12c0-6.63-5.37-12-12-12z"/></svg>
+          </a>
+          <a href="https://www.linkedin.com/in/haaziqiqubal" class="topnav__icon" aria-label="LinkedIn" target="_blank">
+            <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 0 1-2.063-2.065 2.064 2.064 0 1 1 2.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+          </a>
+          <a href="mailto:iqubalh@mcmaster.ca" class="topnav__icon" aria-label="Email">
+            <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M20 4H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4-8 5-8-5V6l8 5 8-5v2z"/></svg>
+          </a>
+        </div>
+
+        <main class="exp-main">
+          <h2 class="exp-heading fade-up">E<span class="kern-xp">X</span>PERIENCES</h2>
+          <ul class="exp-list">
+
+            <!-- FRC 1325 Inverse Paradox -->
+            <li class="exp-item fade-up">
+              <div class="exp-cover">
+                <video src="FRC%201325%20Inverse%20Paradox/widget%20cover.MOV" autoplay loop muted playsinline></video>
+              </div>
+              <div class="exp-body">
+                <div class="exp-title-row">
+                  <p class="exp-role">Mechanical and Design Team</p>
+                  <span class="exp-tag">robotics</span>
+                </div>
+                <p class="exp-desc">In highschool, I was on Team 1325, Inverse Paradox. A community first robotics competition (FRC) team from Mississauga, Ontario. The team builds a robot in 6 weeks to compete in a series of challenges over multiple competitions locally and provincially with the aim of qualifying and winning the international competition.</p>
+                <div class="exp-gallery-btns">
+                  <button class="exp-gallery-btn" data-gallery="gallery">Gallery</button>
+                  <button class="exp-gallery-btn" data-gallery="robot-posters">Robot Posters</button>
+                </div>
+              </div>
+            </li>
+
+            <!-- COBWEB -->
+            <li class="exp-item fade-up">
+              <div class="exp-cover">
+                <video src="COBWEB/cover%20widget.mp4" autoplay loop muted playsinline></video>
+              </div>
+              <div class="exp-body">
+                <div class="exp-title-row">
+                  <p class="exp-role">Workshop Assistant and Student Researcher</p>
+                  <span class="exp-tag">research</span>
+                </div>
+                <p class="exp-desc">COBWEB is a research lab at the University of Toronto St. George campus, founded by Dr. Brad Bass. In high school, I joined the lab as a student researcher and contributed to several projects, including soil erosion modelling for the Nordheimer Ravine, breast cancer phototherapy research, and heatwave modelling.</p>
+                <div class="exp-gallery-btns">
+                  <a class="exp-gallery-btn" href="COBWEB/heatwave%20model/heatwave3.xml" download="heatwave3.xml">Heatwave Model</a>
+                </div>
+              </div>
+            </li>
+
+          </ul>
+        </main>
+
+      </div>
+    </div>
+
+    <div id="disc-cursor" aria-hidden="true"></div>
+    <script type="importmap">
+      {
+        "imports": {
+          "three": "https://unpkg.com/three@0.160.0/build/three.module.js"
+        }
+      }
+    </script>
+    <script type="module" src="bg.js"></script>
+    <script>
+      // Scroll fade-ins
+      (function () {
+        const expRight = document.querySelector('.exp-right');
+        const observer = new IntersectionObserver((entries) => {
+          entries.forEach(entry => {
+            if (entry.isIntersecting) {
+              entry.target.style.transitionDelay = entry.target.dataset.fadeDelay || '0s';
+              entry.target.classList.add('visible');
+              observer.unobserve(entry.target);
+            }
+          });
+        }, { root: expRight, threshold: 0.08 });
+
+        document.querySelectorAll('.fade-up').forEach((el, i) => {
+          el.dataset.fadeDelay = (i * 0.1) + 's';
+          observer.observe(el);
+        });
+      })();
+    </script>
+    <script>
+      const galleries = {
+        gallery: [
+          { type: 'video', src: 'FRC%201325%20Inverse%20Paradox/gallery/gallery%201.MOV' },
+          { type: 'video', src: 'FRC%201325%20Inverse%20Paradox/gallery/gallery%202.MOV' },
+          { type: 'image', src: 'FRC%201325%20Inverse%20Paradox/gallery/gallery%203.jpeg' },
+          { type: 'image', src: 'FRC%201325%20Inverse%20Paradox/gallery/gallery%204.JPG' },
+          { type: 'video', src: 'FRC%201325%20Inverse%20Paradox/gallery/gallery%205.MOV' },
+          { type: 'video', src: 'FRC%201325%20Inverse%20Paradox/gallery/gallery%206.MOV' },
+        ],
+        'robot-posters': [
+          { type: 'image', src: 'FRC%201325%20Inverse%20Paradox/posters/poster1.jpg' },
+          { type: 'image', src: 'FRC%201325%20Inverse%20Paradox/posters/poster2.png' },
+          { type: 'image', src: 'FRC%201325%20Inverse%20Paradox/posters/poster3.jpg' },
+        ]
+      };
+
+      let currentGallery = [];
+      let currentIndex = 0;
+
+      const overlay  = document.getElementById('gallery-overlay');
+      const mediaEl  = document.getElementById('gallery-media');
+      const counter  = document.getElementById('gallery-counter');
+      const prevBtn  = document.getElementById('gallery-prev');
+      const nextBtn  = document.getElementById('gallery-next');
+
+      function showItem(index) {
+        currentIndex = (index + currentGallery.length) % currentGallery.length;
+        const item = currentGallery[currentIndex];
+        mediaEl.innerHTML = '';
+        if (item.type === 'video') {
+          const v = document.createElement('video');
+          v.src = item.src;
+          v.autoplay = true;
+          v.loop = true;
+          v.muted = false;
+          v.controls = true;
+          v.playsInline = true;
+          mediaEl.appendChild(v);
+        } else {
+          const img = document.createElement('img');
+          img.src = item.src;
+          mediaEl.appendChild(img);
+        }
+        counter.textContent = (currentIndex + 1) + ' / ' + currentGallery.length;
+      }
+
+      function openGallery(key) {
+        currentGallery = galleries[key];
+        overlay.classList.add('gallery-overlay--open');
+        overlay.setAttribute('aria-hidden', 'false');
+        document.body.style.overflow = 'hidden';
+        showItem(0);
+      }
+
+      function closeGallery() {
+        overlay.classList.remove('gallery-overlay--open');
+        overlay.setAttribute('aria-hidden', 'true');
+        document.body.style.overflow = '';
+        mediaEl.innerHTML = '';
+      }
+
+      document.querySelectorAll('.exp-gallery-btn').forEach(btn => {
+        btn.addEventListener('click', () => openGallery(btn.dataset.gallery));
+      });
+
+      prevBtn.addEventListener('click', () => showItem(currentIndex - 1));
+      nextBtn.addEventListener('click', () => showItem(currentIndex + 1));
+
+      overlay.addEventListener('click', e => {
+        if (e.target === overlay) closeGallery();
+      });
+
+      document.addEventListener('keydown', e => {
+        if (!overlay.classList.contains('gallery-overlay--open')) return;
+        if (e.key === 'Escape')     closeGallery();
+        if (e.key === 'ArrowLeft')  showItem(currentIndex - 1);
+        if (e.key === 'ArrowRight') showItem(currentIndex + 1);
+      });
+    </script>
+  </body>
+</html>

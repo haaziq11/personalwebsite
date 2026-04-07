@@ -1,0 +1,6 @@
+@'
+{
+  "buildCommand": "",
+  "outputDirectory": "."
+}
+'@ | Out-File -Encoding UTF8 vercel.json
