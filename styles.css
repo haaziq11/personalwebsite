@@ -860,6 +860,110 @@ a.tagline__tag--preview:hover::after {
   background: transparent;
 }
 
+/* ── Mobile responsive ── */
+
+@media (max-width: 700px) {
+  /* Sidebar → horizontal top strip */
+  .content {
+    flex-direction: column;
+  }
+
+  .sidebar {
+    width: 100%;
+    padding: 1.1rem 1.5rem 0.7rem;
+    flex-direction: row;
+    align-items: center;
+  }
+
+  .sidenav {
+    flex-direction: row;
+    gap: 1.8rem;
+    align-items: center;
+    justify-content: flex-start;
+  }
+
+  .sidenav__tab {
+    text-align: left;
+  }
+
+  /* me-right fills remaining height and scrolls */
+  .me-right {
+    min-height: 0;
+    flex: 1;
+  }
+
+  /* Icons row */
+  .exp-icons {
+    padding: 0.6rem 1.5rem 0;
+    gap: 1rem;
+  }
+
+  .topnav__icon svg {
+    width: 18px;
+    height: 18px;
+  }
+
+  /* Hero */
+  .hero {
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+    padding-top: 0.8rem;
+  }
+
+  .hero h1 {
+    font-size: clamp(2.5rem, 15vw, 5rem);
+    white-space: normal;
+  }
+
+  .bio {
+    margin-top: 1.2rem;
+  }
+
+  /* Projects */
+  .projects {
+    margin-top: 2.5rem;
+    padding-bottom: 3rem;
+  }
+
+  .projects-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .project-card:nth-child(3) {
+    grid-column: auto;
+  }
+
+  /* Project detail modal */
+  .project-detail__inner {
+    padding: 1.5rem 1rem 4rem;
+  }
+
+  .pd-card {
+    padding: 1.1rem 1rem;
+  }
+
+  .pd-two-col {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+
+  .pd-drawing-row {
+    grid-template-columns: 1fr;
+  }
+
+  .pd-media-row {
+    grid-template-columns: 1fr;
+  }
+
+  .pd-media-grid-4 {
+    grid-template-columns: 1fr 1fr !important;
+  }
+
+  /* Gallery arrows */
+  .gallery-arrow--prev { left: 0.5rem; }
+  .gallery-arrow--next { right: 0.5rem; }
+}
+
 /* ── Link preview popup ── */
 
 #link-preview {

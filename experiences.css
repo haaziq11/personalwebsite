@@ -153,6 +153,41 @@ a.exp-gallery-btn {
   display: inline-block;
 }
 
+/* ── Mobile responsive ── */
+
+@media (max-width: 700px) {
+  .exp-overlay {
+    flex-direction: column;
+  }
+
+  .exp-right {
+    min-height: 0;
+    flex: 1;
+  }
+
+  .exp-main {
+    padding: 1.5rem 1.2rem 4rem;
+  }
+
+  .exp-heading {
+    font-size: clamp(2rem, 12vw, 4rem);
+    margin-bottom: 1.5rem;
+  }
+
+  .exp-list {
+    grid-template-columns: 1fr;
+  }
+
+  .exp-cover {
+    height: 200px;
+  }
+
+  .exp-title-row {
+    flex-wrap: wrap;
+    gap: 0.5rem;
+  }
+}
+
 /* ── Gallery lightbox overlay ── */
 .gallery-overlay {
   display: none;
