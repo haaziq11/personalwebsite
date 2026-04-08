@@ -100,6 +100,8 @@ body.exp-page {
   color: #ffffff;
   text-decoration: underline;
   text-underline-offset: 3px;
+  min-width: 0;
+  flex: 1;
 }
 
 .exp-tag {
@@ -182,10 +184,6 @@ a.exp-gallery-btn {
     height: 200px;
   }
 
-  .exp-title-row {
-    flex-wrap: wrap;
-    gap: 0.5rem;
-  }
 }
 
 /* ── Gallery lightbox overlay ── */
