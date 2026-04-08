@@ -330,7 +330,6 @@ function updateFrisbeeFromProgress() {
 function setupFadeIns() {
   const meRight = document.querySelector('.me-right');
   const els = document.querySelectorAll('.fade-up');
-  let delay = 0;
   const observer = new IntersectionObserver((entries) => {
     entries.forEach(entry => {
       if (entry.isIntersecting) {
@@ -344,6 +343,21 @@ function setupFadeIns() {
   els.forEach((el, i) => {
     if (!el.dataset.fadeDelay) el.dataset.fadeDelay = (i * 0.08) + 's';
     observer.observe(el);
+  });
+
+  // Play project card videos when they scroll into view
+  const videoObserver = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.play().catch(() => {});
+      } else {
+        entry.target.pause();
+      }
+    });
+  }, { root: meRight, threshold: 0.25 });
+
+  document.querySelectorAll('.project-card video').forEach(v => {
+    videoObserver.observe(v);
   });
 }
 
