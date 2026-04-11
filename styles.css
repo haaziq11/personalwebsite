@@ -285,9 +285,10 @@ a.tagline__tag--preview:hover::after {
   filter: brightness(1.15);
 }
 
-.bio-tag--red   { background: #c0393b; }
-.bio-tag--blue  { background: #1a3a7a; }
-.bio-tag--black { background: #1a1a1a; }
+.bio-tag--red    { background: #c0393b; }
+.bio-tag--blue   { background: #1a3a7a; }
+.bio-tag--black  { background: #1a1a1a; }
+.bio-tag--orange { background: #c45c00; }
 
 /* ── Projects section ── */
 
